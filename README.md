@@ -1,2 +1,2 @@
-# DSA-Java
-DSA solutions in Java
+ DSA-Java
+LeetCode-DSA solutions in Java
