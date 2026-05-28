@@ -49,9 +49,11 @@ public void insertStart(int value){
 //inserting at a given index
 public void insertAtIndex(int index,int value){
     if(index==0){
-        insertStart(value);}
+        insertStart(value);
+            return;}
     if(index==size){
-        insertLast(value);}
+        insertLast(value);
+          return;}
     if(index<0||index>size){
      throw new IndexOutOfBoundsException("Invalid Index");
     }
@@ -108,7 +110,7 @@ public void insertAtIndex(int index,int value){
     if(index==size-1){
         return deleteLast();
     }
-    if(index>size){
+    if(index>=size||index<0){
         throw new IndexOutOfBoundsException("Invalid Index");
     }
     
