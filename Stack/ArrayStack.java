@@ -2,7 +2,7 @@
 //Stack follows LIFO-Last In First Out mechanism
 //TC-O(1)-each operation uses exactly O(1) time commplexity to  be completed
 //SC-O(n)
-public class StackArray {
+public class ArrayStack {
     //create an array to hold the elements
     private int[] stackArr;
     // a variable to hold the maximum capacity
@@ -10,12 +10,12 @@ public class StackArray {
     //index of top element
     private int top;
     //constructor
-    public StackArray(int size){
+    public ArrayStack(int size){
         capacity=size;
         stackArr=new int [capacity];
         top=-1;//initialization
     }
-    public StackArray(){
+    public ArrayStack(){
         this(100);
     }
     //push function-to insert elements in stack
@@ -59,7 +59,7 @@ public class StackArray {
     }
   
     public static void main(String[] args) {
-        StackArray stack= new StackArray();
+        ArrayStack stack= new ArrayStack();
         stack.push(9);
         stack.push(78);
         stack.push(77);
