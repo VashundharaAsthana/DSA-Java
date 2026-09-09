@@ -40,3 +40,21 @@ class Solution {
          return false;
     }
 }
+//3rd Approach
+// using a frequency array -> is 
+class Solution{
+    public boolean isAnagram(String s, String t){
+        int [] count= new int[26];
+        for(char ch: s.toCharArray()){
+            count[ch-'a']++;
+        }
+        for(char ch: t.toCharArray()){
+            count[ch-'a']--;
+        }
+        // lambda expression,for loop can be used too to check anagram
+        boolean AllZeros= Arrays.stream(count).allMatch(element->element==0);
+
+        return AllZeros;
+    }
+}
+// FOLLOW-UP:What if the inputs contain Unicode characters? How would you adapt your solution to such a case?-> You can simply use an array of count 128->int []count=new int[128]
